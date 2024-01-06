@@ -17,7 +17,10 @@ class Module:
         self.is_powered = False
         self.power_current = 0
         self.power_req = stats['power_req']
-        self.power_percentage = stats['power_req_percentage']
+        self.power_percentage = 0
+        self.operational_power_factor = stats['operational_power_factor']
+        self.power_req_threshold_factor = stats['power_req_threshold_factor']
+        self.operational_power_threshold = 0
 
         # status flags
         self.is_destroyed = False
@@ -25,6 +28,7 @@ class Module:
         self.is_disabled = False
 
         # call init methods
+        self.update_is_powered()
         self.update_hp_percentage()
         self.update_power_req_percentage()
 
@@ -33,6 +37,9 @@ class Module:
 
     def update_power_req_percentage(self, round_nr=1):
         self.power_percentage = round(((self.power_current / self.power_req) / 100), round_nr)
+
+    def update_is_powered(self):
+        self.is_powered = bool(self.power_current >= self.power_req)
 
     def get_full_ident(self):
         return f'{str(self.type).lower()}_{str(self.class_name).lower()}_{str(self.tag).lower()}'

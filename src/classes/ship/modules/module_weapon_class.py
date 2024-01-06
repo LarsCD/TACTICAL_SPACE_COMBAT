@@ -25,6 +25,7 @@ class Weapon(Module):
         self.accuracy = stats['accuracy']
         self.reload_time = stats['reload_time']
         self.is_reloading = False
+        self.ready_to_fire = False
 
         # effects
         self.status_effects = stats['status_effects']
@@ -45,23 +46,28 @@ class Weapon(Module):
         else:
             self.is_empty = False
 
-    def check_if_ready_to_fire(self, target):
-        # check weapon is if empty
+    def update_ready_to_fire(self, target):
+        # check if weapon powered
+        self.update_is_powered()
+        if not self.is_powered:
+            print(f'\'{self.get_full_ident()}\'cannot fire: weapon not powered')
+            return 0
+
+        # check if weapon is empty
         self.update_is_empty()
         if self.is_empty:
-            print(f'\'{self.get_full_ident()}\'cannot fire: is empty')
+            print(f'\'{self.get_full_ident()}\'cannot fire: weapon is empty')
             return 0
 
         # check if weapon in range of target
         self.update_is_in_range(target['distance_from_ship'])
         if not self.is_in_range:
             print(f'\'{self.get_full_ident()}\'cannot fire: target not in range')
+            return 0
 
-
+        # weapon is ready to fire
+        return 1
 
     def fire(self, target: dict):
-
-        # state: ship is in range and ready to fire
-        pass
-
+        self.update_ready_to_fire()
 
