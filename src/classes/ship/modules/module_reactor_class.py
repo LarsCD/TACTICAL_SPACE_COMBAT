@@ -1,13 +1,13 @@
 from src.classes.ship.modules.module_class import Module
 
 
-class Magazine(Module):
+class Reactor(Module):
     def __init__(self, name: dict, stats: dict):
         super().__init__(name, stats)  # initialize params from Module class
 
-        # ammo stats
-        self.ammo_hold = stats['amount']
-        self.ammo_type = stats['ammo_type']
+        # SPECIFIC stats here
+        self.power_output = stats['power_output']
 
         # SUPER OVERRIDE stats here
         super().requires_power = False
+        super().is_powered = True

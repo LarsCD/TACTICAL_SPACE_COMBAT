@@ -1,10 +1,9 @@
-
 class Ship:
     def __init__(self, name: dict, module: dict, body: dict):
         # name
         self.name = name['name']
         self.tag = name['tag']
-        self.ship_type = name['class_name']
+        self.type = name['type']
         self.class_name = name['class_name']
 
         # MODULES
@@ -32,6 +31,10 @@ class Ship:
         # BODY
         self.size = body['size']
         self.signature = body['signature']
+
+        # status flags
+        self.is_destroyed = False
+        self.is_damaged = False
 
 
 
