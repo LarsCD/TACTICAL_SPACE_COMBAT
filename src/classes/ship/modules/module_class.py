@@ -11,6 +11,8 @@ class Module:
         self.hp_max = stats['hp_max']
         self.hp_current = stats['hp_current']
         self.hp_percentage = 0
+        self.resist_ammo_type = stats['resist_ammo_type']
+        self.resist_multiplier = stats['resist_multiplier']
 
         # power stats
         self.requires_power = True

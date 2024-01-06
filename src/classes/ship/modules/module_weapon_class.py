@@ -1,3 +1,5 @@
+import random
+
 from src.classes.ship.modules.module_class import Module
 
 
@@ -46,28 +48,65 @@ class Weapon(Module):
         else:
             self.is_empty = False
 
-    def update_ready_to_fire(self, target):
+    def update_ready_to_fire(self, target: dict) -> None:
+        """
+        Updates weapon's ready_to_fire flag, checks power, ammo,
+        range to target and if reloading
+        :param target: module or other instance being targeted
+        """
         # check if weapon powered
         self.update_is_powered()
         if not self.is_powered:
             print(f'\'{self.get_full_ident()}\'cannot fire: weapon not powered')
-            return 0
+            self.ready_to_fire = False
 
         # check if weapon is empty
         self.update_is_empty()
         if self.is_empty:
             print(f'\'{self.get_full_ident()}\'cannot fire: weapon is empty')
-            return 0
+            self.ready_to_fire = False
 
         # check if weapon in range of target
         self.update_is_in_range(target['distance_from_ship'])
         if not self.is_in_range:
             print(f'\'{self.get_full_ident()}\'cannot fire: target not in range')
-            return 0
+            self.ready_to_fire = False
+
+        # check if weapon is reloading
+        if self.is_reloading:
+            print(f'\'{self.get_full_ident()}\'cannot fire: weapon is reloading')
+            self.ready_to_fire = False
 
         # weapon is ready to fire
-        return 1
+        self.ready_to_fire = True
 
-    def fire(self, target: dict):
-        self.update_ready_to_fire()
+        return None
 
+    def fire(self, target: dict) -> int | tuple[int | int, float | float, float | float]:
+        """
+        Fires weapon, initiates reload and returns: damage, crit_multiplier,
+        resist_multiplier
+        :param target: module or other instance being targeted
+        """
+        # check if weapon is ready to fire
+        self.update_ready_to_fire(target)
+        if not self.ready_to_fire:
+            return 0
+
+        # check if crit
+        damage_is_crit = random.random() < self.crit_chance
+        if damage_is_crit:
+            crit_multiplier = self.crit_multiplier
+        else:
+            crit_multiplier = 1
+
+        # check if resistant armor
+        if self.damage_type in ['resist_ammo_type']:
+            resist_multiplier = target['resist_multiplier']
+        else:
+            resist_multiplier = 1
+
+        # calculate damage
+        damage = int(self.base_damage * crit_multiplier * resist_multiplier)
+
+        return damage, crit_multiplier, resist_multiplier

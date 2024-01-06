@@ -11,4 +11,3 @@ class Armor(Module):
 
         # type
         self.armor_type = stats['armor_type']
-        self.resist_ammo_type = stats['resist_ammo_type']
