@@ -110,3 +110,4 @@ class Weapon(Module):
         damage = int(self.base_damage * crit_multiplier * resist_multiplier)
 
         return damage, crit_multiplier, resist_multiplier
+
