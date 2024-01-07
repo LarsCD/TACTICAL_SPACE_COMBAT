@@ -1,4 +1,5 @@
 import random
+from typing import Tuple, Any
 
 from src.classes.ship.modules._module import Module
 
@@ -82,10 +83,10 @@ class Weapon(Module):
 
         return None
 
-    def fire(self, target: dict) -> int | tuple[int | int, float | float, float | float]:
+    def fire(self, target: dict) -> int | tuple[int, int | Any, int | Any, int | Any]:
         """
         Fires weapon, initiates reload and returns: damage, crit_multiplier,
-        resist_multiplier
+        resist_ammo_multiplier, resist_damage_multiplier
         :param target: module or other instance being targeted
         """
         # check if weapon is ready to fire
@@ -100,14 +101,20 @@ class Weapon(Module):
         else:
             crit_multiplier = 1
 
-        # check if resistant armor
-        if self.damage_type in ['resist_ammo_type']:
-            resist_multiplier = target['resist_multiplier']
+        # check resistance against ammo type
+        if self.ammo_type in ['resist_ammo_type']:
+            resist_ammo_multiplier = target['resist_ammo_multiplier']
         else:
-            resist_multiplier = 1
+            resist_ammo_multiplier = 1
+
+        # check resistance against damage type
+        if self.damage_type in ['resist_damage_type']:
+            resist_damage_multiplier = target['resist_damage_multiplier']
+        else:
+            resist_damage_multiplier = 1
 
         # calculate damage
-        damage = int(self.base_damage * crit_multiplier * resist_multiplier)
+        damage = int(self.base_damage * crit_multiplier * resist_ammo_multiplier
+                     * resist_damage_multiplier)
 
-        return damage, crit_multiplier, resist_multiplier
-
+        return damage, crit_multiplier, resist_ammo_multiplier, resist_damage_multiplier
