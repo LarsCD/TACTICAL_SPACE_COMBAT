@@ -1,6 +1,6 @@
 import random
 
-from src.classes.ship.modules.module_class import Module
+from src.classes.ship.modules._module import Module
 
 
 class Weapon(Module):

@@ -1,4 +1,4 @@
-from module_class import Module
+from _module import Module
 
 
 class NAME(Module):
