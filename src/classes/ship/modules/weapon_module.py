@@ -1,5 +1,5 @@
 import random
-from typing import Tuple, Any
+from typing import Any
 
 from src.classes.ship.modules._module import Module
 
