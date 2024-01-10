@@ -2,11 +2,12 @@ import random
 from typing import Any
 
 from src.classes.ship.modules._module import Module
+from src.classes.ship.ship_class import Ship
 
 
 class Weapon(Module):
-    def __init__(self, name: dict, stats: dict):
-        super().__init__(name, stats)  # initialize params from Module class
+    def __init__(self, name: dict, stats: dict, Host_ship: Ship):
+        super().__init__(name, stats, Host_ship)  # initialize params from Module class
 
         # damage stats
         self.base_damage = stats['base_damage']
@@ -39,6 +40,7 @@ class Weapon(Module):
     def update_current_ammo_left_percentage(self, round_nr=1):
         self.current_ammo_left_percentage = round(((self.current_ammo_left / self.ammo_hold) / 100), round_nr)
 
+    # TODO: Change 'target' to type Target (class instance)
     def update_is_in_range(self, target_range):
         self.is_in_range = bool(target_range > self.base_range)
 

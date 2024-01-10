@@ -1,7 +1,11 @@
+from src.classes.ship.ship_class import Ship
+
+
 class Module:
-    def __init__(self, name: dict, stats: dict):
+    def __init__(self, name: dict, stats: dict, Host_ship: Ship):
         # this class servers as the common parameters for each module
         # name
+        self.Host_ship = Host_ship
         self.name = name['name']
         self.tag = name['tag']
         self.type = name['type']
@@ -69,6 +73,7 @@ class Module:
         else:
             self.is_destroyed = False
 
+    # TODO: Change 'target' to type Target (class instance)
     def damage(self, damage: int, damage_type: str, target: dict) -> None:
         """
         Updates hp params on module and displays hit message

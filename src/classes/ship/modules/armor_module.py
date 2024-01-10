@@ -1,13 +1,11 @@
 from src.classes.ship.modules._module import Module
+from src.classes.ship.ship_class import Ship
 
 
 class Armor(Module):
-    def __init__(self, name: dict, stats: dict):
-        super().__init__(name, stats)  # initialize params from Module class
+    def __init__(self, name: dict, stats: dict, Host_ship: Ship):
+        super().__init__(name, stats, Host_ship)  # initialize params from Module class
 
-        # hit points
-        self.shield_hp_max = stats['shield_hp_max']
-        self.shield_hp_current = stats['shield_hp_current']
+        # super overrides
+        super().requires_power = False
 
-        # type
-        self.armor_type = stats['armor_type']
