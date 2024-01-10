@@ -1,5 +1,5 @@
-from src.classes.ship.modules._module import Module
-from src.classes.ship.ship_class import Ship
+from src.game.classes.ship.modules._module import Module
+from src.game.classes.ship.ship_class import Ship
 
 
 class Shield(Module):
