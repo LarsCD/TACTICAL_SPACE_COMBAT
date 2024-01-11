@@ -8,7 +8,7 @@ class Shield(Module):
 
         # hit points
         self.shield_hp_max = stats['shield_hp_max']
-        self.shield_hp_current = stats['shield_hp_current']
+        self.current_shield_hp = 0
         self.base_regen_rate = stats['base_regen_rate']
         self.current_regen_rate = 0
 

@@ -13,7 +13,7 @@ class Module:
 
         # hp stats
         self.hp_max: int = stats['hp_max']
-        self.hp_current: int = 0
+        self.current_hp: int = 0
         self.hp_percentage: float = 0
 
         # resistance stats
@@ -23,7 +23,7 @@ class Module:
         self.resist_damage_multiplier: float = stats['resist_damage_multiplier']
 
         # power stats
-        self.power_current: int = 0
+        self.current_power: int = 0
         self.power_req: int = stats['power_req']
         self.power_percentage: float = 0
         self.operational_power_factor: int = stats['operational_power_factor']
@@ -53,22 +53,22 @@ class Module:
         return f'{str(self.type).lower()}_{str(self.class_name).lower()}_{str(self.tag).lower()}'
 
     def update_hp_percentage(self, round_nr=1) -> None:
-        self.hp_percentage = round(((self.hp_current / self.hp_max) / 100), round_nr)
+        self.hp_percentage = round(((self.current_hp / self.hp_max) / 100), round_nr)
 
     def update_power_req_percentage(self, round_nr=1) -> None:
-        self.power_percentage = round(((self.power_current / self.power_req) / 100), round_nr)
+        self.power_percentage = round(((self.current_power / self.power_req) / 100), round_nr)
 
     def update_is_powered(self) -> None:
-        self.is_powered = bool(self.power_current >= self.power_req)
+        self.is_powered = bool(self.current_power >= self.power_req)
 
     def update_is_damaged(self) -> None:
-        if self.hp_current != self.hp_max:
+        if self.current_hp != self.hp_max:
             self.is_damaged = True
         else:
             self.is_damaged = False
 
     def update_is_destroyed(self) -> None:
-        if self.hp_current <= 0:
+        if self.current_hp <= 0:
             self.is_destroyed = True
         else:
             self.is_destroyed = False
@@ -77,12 +77,12 @@ class Module:
     def damage(self, damage: int, damage_type: str, target: dict) -> None:
         """
         Updates hp params on module and displays hit message
-        :param damage: gets subtracted off hp_current
+        :param damage: gets subtracted off current_hp
         :param damage_type: only for display
         :param target: only for display
         :return: None
         """
-        self.hp_current -= damage
+        self.current_hp -= damage
         self.update_is_damaged()
         self.update_is_destroyed()
 
@@ -94,7 +94,7 @@ class Module:
         """
         Set module hp to 0: destroy module (duh)
         """
-        self.hp_current = 0
+        self.current_hp = 0
         self.update_is_damaged()
         self.update_is_destroyed()
 
@@ -104,7 +104,7 @@ class Module:
         """
         Set module hp to hp_max
         """
-        self.hp_current = self.hp_max
+        self.current_hp = self.hp_max
         self.update_is_damaged()
         self.update_is_destroyed()
         return None
