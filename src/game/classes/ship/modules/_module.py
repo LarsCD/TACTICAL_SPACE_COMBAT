@@ -5,37 +5,37 @@ class Module:
     def __init__(self, name: dict, stats: dict, Host_ship: Ship):
         # this class servers as the common parameters for each module
         # name
-        self.Host_ship = Host_ship
-        self.name = name['name']
-        self.tag = name['tag']
-        self.type = name['type']
-        self.class_name = name['class_name']
+        self.Host_ship: Ship = Host_ship
+        self.name: str = name['name']
+        self.tag: str = name['tag']
+        self.type: str = name['type']
+        self.class_name: str = name['class_name']
 
         # hp stats
-        self.hp_max = stats['hp_max']
-        self.hp_current = 0
-        self.hp_percentage = 0
+        self.hp_max: int = stats['hp_max']
+        self.hp_current: int = 0
+        self.hp_percentage: float = 0
 
         # resistance stats
-        self.resist_ammo_type = stats['resist_ammo_type']
-        self.resist_damage_type = stats['resist_damage_type']
-        self.resist_ammo_multiplier = stats['resist_ammo_multiplier']
-        self.resist_damage_multiplier = stats['resist_damage_multiplier']
+        self.resist_ammo_type: str = stats['resist_ammo_type']
+        self.resist_damage_type: str = stats['resist_damage_type']
+        self.resist_ammo_multiplier: float = stats['resist_ammo_multiplier']
+        self.resist_damage_multiplier: float = stats['resist_damage_multiplier']
 
         # power stats
-        self.requires_power = True
-        self.is_powered = False
-        self.power_current = 0
-        self.power_req = stats['power_req']
-        self.power_percentage = 0
-        self.operational_power_factor = stats['operational_power_factor']
-        self.power_req_threshold_factor = stats['power_req_threshold_factor']
-        self.operational_power_threshold = 0
+        self.power_current: int = 0
+        self.power_req: int = stats['power_req']
+        self.power_percentage: float = 0
+        self.operational_power_factor: int = stats['operational_power_factor']
+        self.power_req_threshold_factor: float = stats['power_req_threshold_factor']
+        self.operational_power_threshold: float = 0
 
         # status flags
-        self.is_destroyed = False
-        self.is_damaged = False
-        self.is_disabled = False
+        self.requires_power: bool = True
+        self.is_powered: bool = False
+        self.is_destroyed: bool = False
+        self.is_damaged: bool = False
+        self.is_disabled: bool = False
 
         # call init methods
         self.revive()
