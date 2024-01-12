@@ -39,12 +39,8 @@ class Module:
 
         # call init methods
         self.revive()
-        self.update_is_powered()
-        self.update_is_damaged()
-        self.update_is_damaged()
-        self.update_hp_percentage()
-        self.update_power_req_percentage()
 
+    # DEBUG METHODS
     def get_full_ident(self) -> str:
         """
         Return full identification of the module, (type, class_name, tag). For debug purposes only.
@@ -52,6 +48,7 @@ class Module:
         """
         return f'{str(self.type).lower()}_{str(self.class_name).lower()}_{str(self.tag).lower()}'
 
+    # UPDATE METHODS
     def update_hp_percentage(self, round_nr=1) -> None:
         self.hp_percentage = round(((self.current_hp / self.hp_max) / 100), round_nr)
 
@@ -73,6 +70,18 @@ class Module:
         else:
             self.is_destroyed = False
 
+    def update_module(self) -> None:
+        """
+        Updates module stats, calls all update methods.
+        :return:
+        """
+        self.update_is_powered()
+        self.update_is_damaged()
+        self.update_is_damaged()
+        self.update_hp_percentage()
+        self.update_power_req_percentage()
+
+    # HP METHODS
     # TODO: Change 'target' to type Target (class instance)
     def damage(self, damage: int, damage_type: str, target: dict) -> None:
         """
