@@ -8,6 +8,7 @@ from src.game.classes.ship.ship_class import Ship
 class Weapon(Module):
     def __init__(self, name: dict, stats: dict, Host_ship: Ship):
         super().__init__(name, stats, Host_ship)  # initialize params from Module class
+        # NOTE: Weapon can also be a countermeasure (point defence) weapon
 
         # damage stats
         self.base_damage = stats['base_damage']
@@ -21,18 +22,22 @@ class Weapon(Module):
         self.current_ammo_left = 0
         self.current_ammo_left_percentage = 0
         self.ammo_usage_per_fire = stats['ammo_usage_per_fire']
-        self.is_empty = True
 
         # weapon stats
         self.base_range = stats['base_range']
-        self.is_in_range = False
         self.accuracy = stats['accuracy']
         self.reload_time = stats['reload_time']
-        self.is_reloading = False
-        self.ready_to_fire = False
+        self.is_countermeasure = stats['is_countermeasure']
+        self.valid_targets = stats['valid_targets']  # can be a Ship or missile or something else
 
         # effects
         self.status_effects = stats['status_effects']
+
+        # status flags
+        self.is_empty = True
+        self.is_in_range = False
+        self.is_reloading = False
+        self.ready_to_fire = False
 
         # call init methods
         self.update_current_ammo_left_percentage()
@@ -69,15 +74,15 @@ class Weapon(Module):
             print(f'\'{self.get_full_ident()}\'cannot fire: weapon is empty')
             self.ready_to_fire = False
 
+        # check if weapon is reloading
+        if self.is_reloading:
+            print(f'\'{self.get_full_ident()}\'cannot fire: weapon is reloading')
+            self.ready_to_fire = False
+
         # check if weapon in range of target
         self.update_is_in_range(target['distance_from_ship'])
         if not self.is_in_range:
             print(f'\'{self.get_full_ident()}\'cannot fire: target not in range')
-            self.ready_to_fire = False
-
-        # check if weapon is reloading
-        if self.is_reloading:
-            print(f'\'{self.get_full_ident()}\'cannot fire: weapon is reloading')
             self.ready_to_fire = False
 
         # weapon is ready to fire
@@ -85,7 +90,7 @@ class Weapon(Module):
 
         return None
 
-    def fire(self, target: dict) -> int | tuple[int, int | Any, int | Any, int | Any]:
+    def fire(self, target: dict) -> tuple[int, int | Any, int | Any, int | Any] | None:
         """
         Fires weapon, initiates reload and returns: damage, crit_multiplier,
         resist_ammo_multiplier, resist_damage_multiplier
@@ -94,7 +99,7 @@ class Weapon(Module):
         # check if weapon is ready to fire
         self.update_ready_to_fire(target)
         if not self.ready_to_fire:
-            return 0
+            return None
 
         # check if crit
         damage_is_crit = random.random() < self.crit_chance

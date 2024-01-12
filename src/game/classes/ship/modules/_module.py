@@ -83,10 +83,10 @@ class Module:
         :return: None
         """
         self.current_hp -= damage
+        print(f'{self.get_full_ident()} got {damage} \'{damage_type}\' damage from \'{target["tag"]}\'')
+
         self.update_is_damaged()
         self.update_is_destroyed()
-
-        print(f'{self.get_full_ident()} got {damage} \'{damage_type}\' damage from \'{target["tag"]}\'')
 
         return None
 
