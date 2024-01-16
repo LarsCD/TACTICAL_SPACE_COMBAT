@@ -10,6 +10,7 @@ class Module:
         self.tag: str = name['tag']
         self.type: str = name['type']
         self.class_name: str = name['class_name']
+        self.module_level: int = name['module_level']
 
         # hp stats
         self.hp_max: int = stats['hp_max']
@@ -17,8 +18,8 @@ class Module:
         self.hp_percentage: float = 0
 
         # resistance stats
-        self.resist_ammo_type: str = stats['resist_ammo_type']
-        self.resist_damage_type: str = stats['resist_damage_type']
+        self.resist_ammo_type: list = stats['resist_ammo_type']
+        self.resist_damage_type: list = stats['resist_damage_type']
         self.resist_ammo_multiplier: float = stats['resist_ammo_multiplier']
         self.resist_damage_multiplier: float = stats['resist_damage_multiplier']
 
@@ -26,7 +27,7 @@ class Module:
         self.current_power: int = 0
         self.power_req: int = stats['power_req']
         self.power_percentage: float = 0
-        self.operational_power_factor: int = stats['operational_power_factor']
+        self.operational_power_factor: float = stats['operational_power_factor']
         self.power_req_threshold_factor: float = stats['power_req_threshold_factor']
         self.operational_power_threshold: float = 0
 

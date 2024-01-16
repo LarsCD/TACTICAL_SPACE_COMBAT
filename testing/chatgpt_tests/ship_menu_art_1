@@ -1,0 +1,39 @@
+-----------------------------------------------------
+| Player 1                                        P2
+| Ship:   █████████████████
+|        [Name: Ship1]
+|        [Tag: TAG001]
+|        [Type: Fighter]
+|        [Class: ClassA]
+|
+|   Modules:
+|   Power Module:       Drives:             [████████████████  ]
+|                       Reactors:           [████████████████  ]
+|
+|   Hit Point Module:   Shields:            [████████████████  ]
+|                       Armor:              [████████████████  ]
+|                       Hull:               [████████████████  ]
+|
+|   Combat Module:      Weapons:            [████████████████  ]
+|                       Countermeasures:    [████████████
+|                       Magazine:           [████████████████  ]
+|
+|   Control Module:     Control:            [████████████████  ]
+|                       Thrusters:          [████████████████  ]
+|
+|   Sensor Modules:     Sensors:            [██████████████████]
+|
+|   Body                Size:               [████████████████  ]
+|                       Signature:          [██████████████    ]
+|
+|   Status Flags:       Destroyed: [ ]      Damaged: [X]
+|
+|   Target:             None
+|
+|
+| Action Menu:
+|   1. Fire Weapons
+|   2. Reload Ammo
+|   3. Activate Shields
+|   4. Repair Armor
+|

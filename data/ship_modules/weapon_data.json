@@ -1,0 +1,39 @@
+{
+  "weapon_1": {
+    "name": {
+      "name": "Cannon 1",
+      "tag": "weapon_1",
+      "type": "weapon",
+      "class_name": "cannon",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 20,
+
+      "resist_ammo_type": [],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.8,
+      "resist_damage_multiplier": 0.9,
+
+      "power_req": 12,
+      "operational_power_factor": 0.6,
+      "power_req_threshold_factor": 0.6,
+
+      "base_damage": 6,
+      "damage_type": "physical",
+      "crit_chance": 0.1,
+      "crit_multiplier": 1.5,
+
+      "ammo_hold": 10,
+      "ammo_type": "100mm_cannon",
+      "ammo_usage_per_fire": 2,
+
+      "base_range": 5,
+      "accuracy": 0.70,
+      "reload_time": 1,
+      "is_countermeasure": false,
+      "valid_targets": ["ship"],
+      "status_effects": []
+    }
+  }
+}

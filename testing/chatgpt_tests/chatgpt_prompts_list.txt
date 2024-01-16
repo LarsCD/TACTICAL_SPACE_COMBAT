@@ -1,0 +1,17 @@
+This file is just as reference to common prompts to give to chatgpt.
+
+Game prompt:
+
+I'm making a game in python about space battleships that can battle each other.
+Ships have modules like weapons, ammo magazines, shields, armor and so forth.
+The gameplay will be a turn based combat where 2 players combat with their ships
+and try and destroy the other ship by taking down critical modules and stuff.
+
+
+
+Pygame prompt:
+
+Now I don't know if I want to make it a text based game or with relatively low
+effort 2d assets and UI. It won't be anything dynamic but feedback for the
+player is nice to have to make the game more engaging. Could you sketch out a
+test scene using pygame that could take into account all this?
