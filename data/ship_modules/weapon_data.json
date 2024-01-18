@@ -1,36 +1,100 @@
 {
-  "weapon_1": {
+  "tt4_cannon": {
     "name": {
-      "name": "Cannon 1",
-      "tag": "weapon_1",
+      "name": "TT4 Cannon",
+      "tag": "tt4_cannon",
       "type": "weapon",
       "class_name": "cannon",
       "module_level": 1
     },
     "stats": {
       "hp_max": 20,
-
       "resist_ammo_type": [],
       "resist_damage_type": ["energy"],
       "resist_ammo_multiplier": 0.8,
       "resist_damage_multiplier": 0.9,
-
       "power_req": 12,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
 
-      "base_damage": 6,
+      "base_damage": 8,
       "damage_type": "physical",
       "crit_chance": 0.1,
       "crit_multiplier": 1.5,
-
       "ammo_hold": 10,
-      "ammo_type": "100mm_cannon",
+      "ammo_type": "50mm_cannon",
       "ammo_usage_per_fire": 2,
-
       "base_range": 5,
       "accuracy": 0.70,
       "reload_time": 1,
+      "is_countermeasure": false,
+      "valid_targets": ["ship"],
+      "status_effects": []
+    }
+  },
+
+  "tt7_cannon": {
+    "name": {
+      "name": "TT7 Cannon",
+      "tag": "tt7_cannon",
+      "type": "weapon",
+      "class_name": "cannon",
+      "module_level": 2
+    },
+    "stats": {
+      "hp_max": 30,
+      "resist_ammo_type": [],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.8,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 18,
+      "operational_power_factor": 0.6,
+      "power_req_threshold_factor": 0.6,
+
+      "base_damage": 16,
+      "damage_type": "physical",
+      "crit_chance": 0.15,
+      "crit_multiplier": 1.5,
+      "ammo_hold": 14,
+      "ammo_type": "50mm_cannon",
+      "ammo_usage_per_fire": 2,
+      "base_range": 6,
+      "accuracy": 0.80,
+      "reload_time": 1,
+      "is_countermeasure": false,
+      "valid_targets": ["ship"],
+      "status_effects": []
+    }
+  },
+
+  "tt10_cannon": {
+    "name": {
+      "name": "TT10 Cannon",
+      "tag": "tt10_cannon",
+      "type": "weapon",
+      "class_name": "cannon",
+      "module_level": 3
+    },
+    "stats": {
+      "hp_max": 45,
+      "resist_ammo_type": [],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.8,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 25,
+      "operational_power_factor": 0.6,
+      "power_req_threshold_factor": 0.6,
+
+      "base_damage": 28,
+      "damage_type": "physical",
+      "crit_chance": 0.19,
+      "crit_multiplier": 1.5,
+      "ammo_hold": 24,
+      "ammo_type": "50mm_cannon",
+      "ammo_usage_per_fire": 2,
+      "base_range": 8,
+      "accuracy": 0.85,
+      "reload_time": 2,
       "is_countermeasure": false,
       "valid_targets": ["ship"],
       "status_effects": []

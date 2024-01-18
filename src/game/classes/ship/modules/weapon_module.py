@@ -109,13 +109,13 @@ class Weapon(Module):
             crit_multiplier = 1
 
         # check resistance against ammo type
-        if self.ammo_type in ['resist_ammo_type']:
+        if self.ammo_type in target['resist_ammo_type']:
             resist_ammo_multiplier = target['resist_ammo_multiplier']
         else:
             resist_ammo_multiplier = 1
 
         # check resistance against damage type
-        if self.damage_type in ['resist_damage_type']:
+        if self.damage_type in target['resist_damage_type']:
             resist_damage_multiplier = target['resist_damage_multiplier']
         else:
             resist_damage_multiplier = 1
