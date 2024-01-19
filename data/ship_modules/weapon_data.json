@@ -8,15 +8,16 @@
       "module_level": 1
     },
     "stats": {
-      "hp_max": 20,
+      "hp_max": 30,
       "resist_ammo_type": [],
-      "resist_damage_type": ["energy"],
+      "resist_damage_type": [
+        "energy"
+      ],
       "resist_ammo_multiplier": 0.8,
       "resist_damage_multiplier": 0.9,
       "power_req": 12,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
-
       "base_damage": 8,
       "damage_type": "physical",
       "crit_chance": 0.1,
@@ -28,7 +29,9 @@
       "accuracy": 0.70,
       "reload_time": 1,
       "is_countermeasure": false,
-      "valid_targets": ["ship"],
+      "valid_targets": [
+        "ship"
+      ],
       "status_effects": []
     }
   },
@@ -42,15 +45,16 @@
       "module_level": 2
     },
     "stats": {
-      "hp_max": 30,
+      "hp_max": 55,
       "resist_ammo_type": [],
-      "resist_damage_type": ["energy"],
+      "resist_damage_type": [
+        "energy"
+      ],
       "resist_ammo_multiplier": 0.8,
       "resist_damage_multiplier": 0.9,
       "power_req": 18,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
-
       "base_damage": 16,
       "damage_type": "physical",
       "crit_chance": 0.15,
@@ -62,7 +66,9 @@
       "accuracy": 0.80,
       "reload_time": 1,
       "is_countermeasure": false,
-      "valid_targets": ["ship"],
+      "valid_targets": [
+        "ship"
+      ],
       "status_effects": []
     }
   },
@@ -76,15 +82,16 @@
       "module_level": 3
     },
     "stats": {
-      "hp_max": 45,
+      "hp_max": 70,
       "resist_ammo_type": [],
-      "resist_damage_type": ["energy"],
+      "resist_damage_type": [
+        "energy"
+      ],
       "resist_ammo_multiplier": 0.8,
       "resist_damage_multiplier": 0.9,
       "power_req": 25,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
-
       "base_damage": 28,
       "damage_type": "physical",
       "crit_chance": 0.19,
@@ -96,7 +103,46 @@
       "accuracy": 0.85,
       "reload_time": 2,
       "is_countermeasure": false,
-      "valid_targets": ["ship"],
+      "valid_targets": [
+        "ship"
+      ],
+      "status_effects": []
+    }
+  },
+
+  "pds_10_defence": {
+    "name": {
+      "name": "PDS 10 Defence",
+      "tag": "pds_10_defence",
+      "type": "weapon",
+      "class_name": "countermeasure",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 10,
+      "resist_ammo_type": [],
+      "resist_damage_type": [],
+      "resist_ammo_multiplier": 0.7,
+      "resist_damage_multiplier": 0.7,
+      "power_req": 5,
+      "operational_power_factor": 0.8,
+      "power_req_threshold_factor": 0.8,
+      "base_damage": 4,
+      "damage_type": "point_defence",
+      "crit_chance": 0.2,
+      "crit_multiplier": 2.5,
+      "ammo_hold": 3000,
+      "ammo_type": "20mm_casing",
+      "ammo_usage_per_fire": 200,
+      "base_range": 3,
+      "accuracy": 0.60,
+      "reload_time": 0,
+      "is_countermeasure": true,
+      "valid_targets": [
+        "ship",
+        "missile",
+        "drone"
+      ],
       "status_effects": []
     }
   }

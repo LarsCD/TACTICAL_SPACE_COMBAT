@@ -18,7 +18,6 @@ class Ship:
 
         # combat module
         self.weapons = module['weapons']
-        self.countermeasures = module['countermeasures']
         self.magazine = module['magazine']
 
         # control module
