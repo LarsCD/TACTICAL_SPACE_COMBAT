@@ -30,7 +30,8 @@
       "reload_time": 1,
       "is_countermeasure": false,
       "valid_targets": [
-        "ship"
+        "ship",
+        "fighter"
       ],
       "status_effects": []
     }
@@ -67,7 +68,8 @@
       "reload_time": 1,
       "is_countermeasure": false,
       "valid_targets": [
-        "ship"
+        "ship",
+        "fighter"
       ],
       "status_effects": []
     }
@@ -104,7 +106,8 @@
       "reload_time": 2,
       "is_countermeasure": false,
       "valid_targets": [
-        "ship"
+        "ship",
+        "fighter"
       ],
       "status_effects": []
     }
@@ -139,7 +142,6 @@
       "reload_time": 0,
       "is_countermeasure": true,
       "valid_targets": [
-        "ship",
         "missile",
         "drone"
       ],
