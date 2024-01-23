@@ -1,4 +1,24 @@
--------------------------------- [VESSEL INFO] --------------------------------
+"""
+by: LarsCD2002
+started: 6/1/2024
+
+SOURCES
+    - Nebulous: Fleet Command (inspiration for ship/system stats)
+    - https://www.youtube.com/watch?v=bImISkF76T8 (inspiration for ship/system stats)
+
+
+"""
+
+"""
+FileIO testing
+Testing if importing data works right 
+"""
+from src.engine.utilities.file_IO.dataloader import Dataloader
+
+STATIC_DATA = Dataloader().load_all_data()
+print(STATIC_DATA)
+
+print("""-------------------------------- [VESSEL INFO] --------------------------------
 
 [USS CLASS DESTROYER]
 
@@ -8,7 +28,7 @@ POWER USAGE:    (670/800)     [///////////////////////....]
 SIGNATURE:      (80/100)      [///////////////////////....]
 
 [MODULE]        [STATUS]    [WARNINGS]  [DANGERS]
-REACTOR         ONLINE      LOW POWER   CRITICAL
+REACTOR         ONLINE      LOW POWER   CRITICAL 
 CONTROL         ONLINE
 THRUSTERS       ONLINE      DAMAGED
 SENSORS         OFFLINE     NO POWER
@@ -90,3 +110,10 @@ OVERALL HP:         801/1250    [/////////////////////......]
 - HP:               180/200     [///////////////////////////]
 - POWER OUTPUT:     670/800     [///////////////////////....]
 - POWER USAGE:      670/800     [///////////////////////....]
+""")
+
+"""
+Creating classes
+Testing if creation of all classes works
+"""
+input('\n[ENTER]: EXIT')

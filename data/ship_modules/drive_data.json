@@ -1,7 +1,7 @@
 {
   "vulcan_1_light_drive": {
     "name": {
-      "name": "Vulcan 1 Light Drive",
+      "name": "VULCAN 1 LIGHT DRIVE",
       "tag": "vulcan_1_light_drive",
       "type": "drive",
       "class_name": "light_drive",
@@ -22,7 +22,7 @@
   },
   "vulcan_2_medium_drive": {
     "name": {
-      "name": "Vulcan 2 Medium Drive",
+      "name": "VULCAN 2 MEDIUM DRIVE",
       "tag": "vulcan_2_medium_drive",
       "type": "drive",
       "class_name": "medium_drive",
