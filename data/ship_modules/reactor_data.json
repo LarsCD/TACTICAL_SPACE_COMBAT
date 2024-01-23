@@ -1,0 +1,23 @@
+{
+  "cfr_800_reactor": {
+    "name": {
+      "name": "CFR 800 REACTOR",
+      "tag": "cfr_800_reactor",
+      "type": "reactor",
+      "class_name": "light_reactor",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 200,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.2,
+      "resist_damage_multiplier": 0.2,
+      "power_req": 0,
+      "operational_power_factor": 1,
+      "power_req_threshold_factor": 1,
+
+      "power_output": 800
+    }
+  }
+}

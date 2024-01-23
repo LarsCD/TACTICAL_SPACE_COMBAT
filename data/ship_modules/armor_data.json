@@ -1,0 +1,21 @@
+{
+  "ta_300_armored_plating": {
+    "name": {
+      "name": "TA 300 Armored Plating",
+      "tag": "ta_300_armored_plating",
+      "type": "armor",
+      "class_name": "light_armor",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 300,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["physical", "armor_piercing"],
+      "resist_ammo_multiplier": 0.2,
+      "resist_damage_multiplier": 0.2,
+      "power_req": 0,
+      "operational_power_factor": 1,
+      "power_req_threshold_factor": 1
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "light_ion_secondary_thrusters": {
+    "name": {
+      "name": "Light Ion Secondary Thrusters",
+      "tag": "light_ion_secondary_thrusters",
+      "type": "thruster",
+      "class_name": "secondary_thruster",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 150,
+      "resist_ammo_type": [""],
+      "resist_damage_type": [""],
+      "resist_ammo_multiplier": 0.6,
+      "resist_damage_multiplier": 0.6,
+      "power_req": 75,
+      "operational_power_factor": 0.1,
+      "power_req_threshold_factor": 0.1,
+
+      "thrust_power": 10,
+      "control_modifier": 2.20
+    }
+  },
+  "light_fusion_primary_thrusters": {
+    "name": {
+      "name": "Light Fusion Primary Thrusters",
+      "tag": "light_fusion_primary_thrusters",
+      "type": "thruster",
+      "class_name": "primary_thruster",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 350,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["physical"],
+      "resist_ammo_multiplier": 0.8,
+      "resist_damage_multiplier": 0.8,
+      "power_req": 250,
+      "operational_power_factor": 0.1,
+      "power_req_threshold_factor": 0.1,
+
+      "thrust_power": 80,
+      "control_modifier": 1.30
+    }
+  }
+}

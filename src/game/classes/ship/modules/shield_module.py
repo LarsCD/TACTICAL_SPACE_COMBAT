@@ -16,10 +16,7 @@ class Shield(Module):
         self.is_up = False
 
         # activation
-        self.activation_time = stats['activation_time']
-
-        # resistance
-        self.resist_ammo_type = stats['resist_ammo_type']
+        self.activation_time = stats['activation_time']  # turns
 
         # call init methods
         self.update_current_regen_rate()

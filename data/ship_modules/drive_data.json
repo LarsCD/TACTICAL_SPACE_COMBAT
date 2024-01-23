@@ -1,0 +1,44 @@
+{
+  "vulcan_1_light_drive": {
+    "name": {
+      "name": "Vulcan 1 Light Drive",
+      "tag": "vulcan_1_light_drive",
+      "type": "drive",
+      "class_name": "light_drive",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 200,
+      "resist_ammo_type": [],
+      "resist_damage_type": ["physical"],
+      "resist_ammo_multiplier": 0.4,
+      "resist_damage_multiplier": 0.3,
+      "power_req": 100,
+      "operational_power_factor": 0.7,
+      "power_req_threshold_factor": 0.7,
+
+      "jump_distance_max": 20
+    }
+  },
+  "vulcan_2_medium_drive": {
+    "name": {
+      "name": "Vulcan 2 Medium Drive",
+      "tag": "vulcan_2_medium_drive",
+      "type": "drive",
+      "class_name": "medium_drive",
+      "module_level": 2
+    },
+    "stats": {
+      "hp_max": 300,
+      "resist_ammo_type": [],
+      "resist_damage_type": ["physical"],
+      "resist_ammo_multiplier": 0.45,
+      "resist_damage_multiplier": 0.35,
+      "power_req": 150,
+      "operational_power_factor": 0.6,
+      "power_req_threshold_factor": 0.6,
+
+      "jump_distance_max": 32
+    }
+  }
+}

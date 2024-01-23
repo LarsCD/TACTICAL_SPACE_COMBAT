@@ -8,17 +8,17 @@ class Ship:
 
         # MODULES
         # power module
-        self.drives = module['drives']
-        self.reactors = module['reactors']
+        self.drives = module['drives']  # DATA
+        self.reactors = module['reactors']  # DATA
 
         # hit point module
-        self.shields = module['shields']
-        self.armor = module['armor']
-        self.hull = module['hull']
+        self.shields = module['shields']  # DATA
+        self.armor = module['armor']  # DATA
+        self.hull = module['hull']  # DATA
 
         # combat module
-        self.weapons = module['weapons']
-        self.magazine = module['magazine']
+        self.weapons = module['weapons']  # DATA
+        self.magazine = module['magazine']  # DATA
 
         # control module
         self.control = module['control']

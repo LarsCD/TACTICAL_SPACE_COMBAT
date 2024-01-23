@@ -1,0 +1,25 @@
+{
+  "lsm_beam_shield": {
+    "name": {
+      "name": "LSM Beam Shield",
+      "tag": "lsm_beam_shield",
+      "type": "shield",
+      "class_name": "light_shield",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 40,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.9,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 60,
+      "operational_power_factor": 0.1,
+      "power_req_threshold_factor": 0.1,
+
+      "shield_hp_max": 50,
+      "base_regen_rate": 12,
+      "activation_time": 1
+    }
+  }
+}

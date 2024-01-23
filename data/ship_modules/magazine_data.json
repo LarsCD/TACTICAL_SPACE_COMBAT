@@ -1,0 +1,46 @@
+{
+  "20mm_small_magazine": {
+    "name": {
+      "name": "20mm Small Magazine",
+      "tag": "20mm_small_magazine",
+      "type": "magazine",
+      "class_name": "small_magazine",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 40,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.9,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 0,
+      "operational_power_factor": 1,
+      "power_req_threshold_factor": 1,
+
+      "amount": 5000,
+      "ammo_type": "20mm_casing"
+    }
+  },
+  "50mm_small_magazine": {
+    "name": {
+      "name": "50mm Small Magazine",
+      "tag": "50mm_small_magazine",
+      "type": "magazine",
+      "class_name": "small_magazine",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 50,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["energy"],
+      "resist_ammo_multiplier": 0.9,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 0,
+      "operational_power_factor": 1,
+      "power_req_threshold_factor": 1,
+
+      "amount": 140,
+      "ammo_type": "50mm_cannon"
+    }
+  }
+}

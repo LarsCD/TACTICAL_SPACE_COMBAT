@@ -8,5 +8,6 @@ class Control(Module):
 
         # specific stats
         self.targeting_accuracy = stats['targeting_accuracy']
+        self.control_modifier = stats['control_modifier']
 
         # super overrides

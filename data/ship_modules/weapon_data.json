@@ -18,6 +18,7 @@
       "power_req": 12,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
+
       "base_damage": 8,
       "damage_type": "physical",
       "crit_chance": 0.1,
@@ -56,6 +57,7 @@
       "power_req": 18,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
+
       "base_damage": 16,
       "damage_type": "physical",
       "crit_chance": 0.15,
@@ -94,6 +96,7 @@
       "power_req": 25,
       "operational_power_factor": 0.6,
       "power_req_threshold_factor": 0.6,
+
       "base_damage": 28,
       "damage_type": "physical",
       "crit_chance": 0.19,
@@ -130,6 +133,7 @@
       "power_req": 5,
       "operational_power_factor": 0.8,
       "power_req_threshold_factor": 0.8,
+
       "base_damage": 4,
       "damage_type": "point_defence",
       "crit_chance": 0.2,

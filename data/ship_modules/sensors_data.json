@@ -1,0 +1,46 @@
+{
+  "light_primary_radar": {
+    "name": {
+      "name": "light Primary Radar",
+      "tag": "light_primary_radar",
+      "type": "sensor",
+      "class_name": "light_radar",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 120,
+      "resist_ammo_type": [""],
+      "resist_damage_type": ["physical"],
+      "resist_ammo_multiplier": 0.9,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 85,
+      "operational_power_factor": 0.1,
+      "power_req_threshold_factor": 0.1,
+
+      "targeting_range": 12,
+      "targeting_accuracy_modifier": 2.00
+    }
+  },
+  "light_secondary_radar": {
+    "name": {
+      "name": "light Secondary Radar",
+      "tag": "light_secondary_radar",
+      "type": "sensor",
+      "class_name": "light_radar",
+      "module_level": 1
+    },
+    "stats": {
+      "hp_max": 15,
+      "resist_ammo_type": [""],
+      "resist_damage_type": [],
+      "resist_ammo_multiplier": 0.9,
+      "resist_damage_multiplier": 0.9,
+      "power_req": 10,
+      "operational_power_factor": 0.1,
+      "power_req_threshold_factor": 0.1,
+
+      "targeting_range": 4,
+      "targeting_accuracy_modifier": 1.20
+    }
+  }
+}
