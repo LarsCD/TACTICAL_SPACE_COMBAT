@@ -18,7 +18,7 @@ class DevLogger:
         logging.basicConfig(level=print_level)
         logger_name = str(logging_class.__name__)
         log_file_path = str(
-            f"{self.cwd}{self.logging_dir}dev-log-{time_start.date()}-{time_start.time().hour}h-{time_start.time().minute}m-{time_start.time().second}s.txt")
+            f"{self.cwd}/..{self.logging_dir}dev-log-{time_start.date()}-{time_start.time().hour}h-{time_start.time().minute}m-{time_start.time().second}s.txt")
 
         self.logger = logging.getLogger(logger_name)
         file_handler = logging.FileHandler(log_file_path)

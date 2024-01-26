@@ -1,4 +1,4 @@
-DEV_LOGGING_DIR = "/../src/engine/utilities/logger/logs/"
+DEV_LOGGING_DIR = "/src/engine/utilities/logger/logs/"
 ALL_DATA_FILES = {'/../data/ship_modules/drive_data.json': 'drive_data',
                   '/../data/ship_modules/reactor_data.json': 'reactor_data',
                   '/../data/ship_modules/shield_data.json': 'shield_data',

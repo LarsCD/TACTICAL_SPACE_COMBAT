@@ -1,16 +1,16 @@
 {
-  "tungsten_inner_plating": {
+  "mk_1_tungsten_plating": {
     "name": {
-      "name": "Tungsten Outer Hull Plating",
-      "tag": "tungsten_outer_hull_plating",
+      "name": "MK1 TUNGSTEN PLATING",
+      "tag": "mk_1_tungsten_plating",
       "type": "hull",
       "class_name": "light_hull",
       "module_level": 1
     },
     "stats": {
-      "hp_max": 600,
+      "hp_max": 1600,
       "resist_ammo_type": [""],
-      "resist_damage_type": ["physical"],
+      "resist_damage_type": ["energy"],
       "resist_ammo_multiplier": 0.4,
       "resist_damage_multiplier": 0.4,
       "power_req": 0,

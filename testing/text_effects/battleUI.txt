@@ -1,21 +1,19 @@
--------------------------------- [VESSEL INFO] --------------------------------
+[ACC VIOLENCE DESTROYER CLASS]
 
-[USS CLASS DESTROYER]
-
-OVERALL HP:     (801/1250)    [/////////////////////......]
+OVERALL HP:     (1680/2250)   [/////////////////////......]
 POWER OUTPUT:   (670/800)     [///////////////////////....]
 POWER USAGE:    (670/800)     [///////////////////////....]
 SIGNATURE:      (80/100)      [///////////////////////....]
 
-[MODULE]        [STATUS]    [WARNINGS]  [DANGERS]
-REACTOR         ONLINE      LOW POWER   CRITICAL
+[MODULE]        [STATUS]    [WARNINGS]  [DAMAGE]    [DANGERS]
+REACTOR         ONLINE      LOW PWR     CRIT        CRIT DMG
 CONTROL         ONLINE
-THRUSTERS       ONLINE      DAMAGED
-SENSORS         OFFLINE     NO POWER
-WEAPONS         ONLINE      DAMAGED
+THRUSTERS       ONLINE                  MED
+SENSORS         DESTROYED   ----        ----        ----
+WEAPONS         ONLINE                  LOW
 
 -------------------------------- [PRIMARY MODULES] --------------------------------
-OVERALL HP:         801/1250    [/////////////////////......]
+OVERALL HP:         (480/500)     [////////////////////////...]
 
 MODULES
 <REACTOR (CFR 800 REACTOR)>
@@ -40,8 +38,8 @@ OVERALL HP:         801/1250    [/////////////////////......]
 - HP:               180/200     [///////////////////////////]
 - POWER OUTPUT:     670/800     [///////////////////////....]
 
-<HULL (CFR 800 REACTOR)>
-- HP:               180/200     [///////////////////////////]
+<HULL (Tungsten Outer Hull Plating)>
+- HP:               1100/1600   [///////////////////........]
 - POWER OUTPUT:     670/800     [///////////////////////....]
 
 
@@ -49,11 +47,13 @@ OVERALL HP:         801/1250    [/////////////////////......]
 OVERALL HP:         801/1250    [/////////////////////......]
 
 
-[1] <WEAPON (TT10 Cannon)> [☒ DESTROYED ☒]
+[1] <WEAPON (TT10 Cannon)> 
+- STATUS:           DESTROYED   ----        ----        ----
 - HP:               0/70        [...........................]
 - AMMO HOLD:        670/800     [///////////////////////....]
 - POWER USAGE:      670/800     [///////////////////////....]
 [2] <WEAPON (TT10 Cannon)> [🔃 RELOADING 🔃]
+- STATUS:           ONLINE       ----       MED         ----
 - HP:               12/70       [//////.....................]
 - AMMO HOLD:        0/24        [...........................]
 - POWER USAGE:      670/800     [///////////////////////....]
