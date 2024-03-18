@@ -17,7 +17,7 @@ class Dataloader:
         static_data = {}
         self.Log(logging.INFO, 'loading data...')
         for file_path in self.load_files:
-            self.Log(logging.INFO, f'loading \'{file_path}\'...')
+            # self.Log(logging.INFO, f'loading \'{file_path}\'...')
             try:
                 file_string = f'{self.cwd}/{file_path}'
                 with open(file_string, 'r') as file:
@@ -25,7 +25,8 @@ class Dataloader:
             except Exception as error_code:
                 self.Log(logging.ERROR, f'error loading \'{file_path}\': {error_code}')
             else:
-                self.Log(logging.INFO, f'successfully loaded \'{file_path}\'')
+                # self.Log(logging.INFO, f'successfully loaded \'{file_path}\'')
                 data_dict_key = str(self.load_files[file_path])
                 static_data[data_dict_key] = data
+        self.Log(logging.INFO, 'loaded data successfully')
         return static_data
